@@ -60,21 +60,26 @@ class GamePage extends StatelessWidget {
               ),
             ],
           ),
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) {
-                  return ResultPage();
-                },
-              ));
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                return ResultPage();
+              },));
             },
-            child: Text("Jugar"),
-            style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey),
-                fixedSize: MaterialStatePropertyAll<Size>(Size(150, 50)),
-                shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                )),
+            child: Container(
+              width: 200,
+              height: 50,
+              color: Color(0xFFD9D9D9),
+              alignment: Alignment.center,
+              child: Text(
+                "JUGAR",
+                style: TextStyle(
+                    fontFamily: "Poppins",
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF5B5B5B)),
+              ),
+            ),
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
