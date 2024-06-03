@@ -68,6 +68,18 @@ class ResultPage extends StatelessWidget {
                   fontWeight: FontWeight.w600),
             ),
           ),
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();  
+            },
+            child: Text("VOLVER"),
+            style: const ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey),
+                fixedSize: MaterialStatePropertyAll<Size>(Size(150, 50)),
+                shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                )),
+          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.end,

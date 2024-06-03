@@ -1,8 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_tarea3/app/view/result.dart';
 
 class GamePage extends StatelessWidget {
   @override
@@ -63,17 +62,19 @@ class GamePage extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              print("HOLAA");
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) {
+                  return ResultPage();
+                },
+              ));
             },
             child: Text("Jugar"),
-
             style: const ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey),
-              fixedSize: MaterialStatePropertyAll<Size>(Size(150, 50)),
-              shape: MaterialStatePropertyAll<RoundedRectangleBorder>(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.zero
-              ),)
-            ),
+                backgroundColor: MaterialStatePropertyAll<Color>(Colors.grey),
+                fixedSize: MaterialStatePropertyAll<Size>(Size(150, 50)),
+                shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+                )),
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
